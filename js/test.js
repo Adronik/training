@@ -18,29 +18,25 @@ names(arrNames);
 var t = performance.now();
 function uravnenie(a, b, c) {
 
+    //Входные данные для уровнения
     var x1, x2;
     
-    if(((a == 4)&&(b == 16)&&(c == 8)) || ((a == 5)&&(b == 10)&&(c == 5)) || ((a == -5)&&(b == 10)&&(c == -5)) || ((a == -1)&&(b == -1)&&(c == -2)) || ((a == 9)&&(b == 0)&&(c == -2)) || ((a == 21)&&(b == 23)&&(c == 4))) {
         
-        //deskriminant
-        var d = Math.pow(b, 2) - 4*a*c;       
-        if (d<0) {
-            t = performance.now() - t;
-            console.log("Дискриминант ниже нуля - корней нет t=" + t);
-        } else if (d == 0) {
-            x1 = -b/(2*a);
-            t = performance.now() - t;
-            console.log("Для значений a=" + a + " b=" + b + " c=" + c + " результат n(x1=" + parseFloat(x1.toFixed(4)) + ") - t = " + t);
-        } else {
-            x1 = (-b+Math.sqrt(d))/(2*a);
-            x2 = (-b-Math.sqrt(d))/(2*a);
-            t = performance.now() - t;
-            console.log("Для значений a=" + a + " b=" + b + " c=" + c + " результат n(x1=" + parseFloat(x1.toFixed(4)) + ", x2=" + parseFloat(x2.toFixed(4)) + ") - t = " + t);
-        }
-
+    //deskriminant
+    var d = Math.pow(b, 2) - 4*a*c;       
+    if (d<0) {
+        t = performance.now() - t;
+        console.log("Дискриминант ниже нуля - корней нет t=" + t);
+    } else if (d == 0) {
+        x1 = -b/(2*a);
+        t = performance.now() - t;
+        console.log("Для значений a=" + a + " b=" + b + " c=" + c + " результат n(x1=" + parseFloat(x1.toFixed(4)) + ") - t = " + t);
+    } else {
+        x1 = (-b+Math.sqrt(d))/(2*a);
+        x2 = (-b-Math.sqrt(d))/(2*a);
+        t = performance.now() - t;
+        console.log("Для значений a=" + a + " b=" + b + " c=" + c + " результат n(x1=" + parseFloat(x1.toFixed(4)) + ", x2=" + parseFloat(x2.toFixed(4)) + ") - t = " + t);
     }
-
-    
 
 }
 
